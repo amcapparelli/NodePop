@@ -11,3 +11,9 @@ To install this API use
 npm install
 ```
 
+## Run in mode development
+
+To run the app in mode development use:
+```
+npm run dev
+```
