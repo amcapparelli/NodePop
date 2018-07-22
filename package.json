@@ -12,11 +12,10 @@
     "ejs": "~2.5.7",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
+    "mongoose": "^5.2.4",
     "morgan": "~1.9.0"
   },
   "devDependencies": {
-    "cross": "^1.0.0",
-    "cross-env": "^5.2.0",
-    "env": "0.0.2"
+    "cross-env": "^5.2.0"
   }
 }
