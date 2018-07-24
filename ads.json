@@ -1,0 +1,31 @@
+ [
+        {
+            "productName": "raqueta de tenis",
+            "forSale": true,
+            "price": 120,
+            "image": "",
+            "tags": ["sports", "tennis", "amateur"]
+        },
+        {
+            "productName": "estilográfica",
+            "forSale": true,
+            "price": 150,
+            "image": "",
+            "tags": ["office", "pen", "presents"]
+        },
+        {
+            "productName": "silla gamer",
+            "forSale": false,
+            "price": 90,
+            "image": "",
+            "tags": ["gamer", "chair", "work", "home"]
+        },
+        {
+            "productName": "robot aspirador",
+            "forSale": false,
+            "price": 100,
+            "image": "",
+            "tags": ["home", "cleaning", "technology"]
+        }
+    ]
+
