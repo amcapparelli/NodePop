@@ -13,9 +13,11 @@ To install NodePop use
 npm install
 ```
 
+Then set your environment variables values using the '.env.forReview' file, and copy/paste that info into a new '.env' file
+
 ## Install DB
 
-Please, befor running NodePop, install the database objects using:
+Please, before running NodePop, install the database objects using:
 
 ```
 npm run install_db

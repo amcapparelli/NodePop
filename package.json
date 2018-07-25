@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "dev": "cross-env DEBUG=nodepop:* nodemon",
-    "install_db": "node ./lib/connMongoose"
+    "install_db": "node ./lib/remove_bd"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
