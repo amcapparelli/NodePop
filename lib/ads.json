@@ -1,4 +1,5 @@
- [
+ { 
+     "ads":[
         {
             "productName": "raqueta de tenis",
             "forSale": true,
@@ -28,4 +29,4 @@
             "tags": ["home", "cleaning", "technology"]
         }
     ]
-
+ }
