@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1></h1>
-    <p>Welcome to </p>
-    <p>This are the </p>
+    <h1>Listado de Anuncios de <%= title %> </h1>
+    <ul>
+      <% adlist.forEach ((item) => { %>
+        <li><%= item %></li>
+      <% }) %>
+    </ul>
+
+
   </body>
 </html>

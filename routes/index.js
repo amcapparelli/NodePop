@@ -5,14 +5,12 @@ const Ads = require('../lib/createModels')
 /* GET home page. */
 router.get('/', async (req, res, next) => {
   try {
-    const anuncios = await Ads.find()
-    const productNames =[]
-    const productPrices =[]
-    for (let i = 0; i < anuncios.length; i++){
-        productNames.push(anuncios[i].productName)
-        productPrices.push(anuncios[i].price)
-    }
-      res.render('index')
+    const allAds = await Ads.find()
+    const adsToShow = allAds.map(item =>  item.productName + ' ' + item.price )  
+      res.render('index', {
+        title: 'NodePop',
+        adlist: adsToShow
+      })
   } catch (err) {
       next(err)
   }
