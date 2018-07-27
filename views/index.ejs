@@ -24,23 +24,16 @@
         </form>
       </div>
 
-    <div class="wrapper-ads">
+    <h2>Anuncios de venta</h2>
       <div class="wrapper-list">
-        <h2>Anuncios de venta</h2>
-          <ul >
             <% adlist.forEach ((item) => { %>
-              <li ><%= item %></li>
+              <div class="element">
+                <p><%= item.productName %> </p>
+                <img src=<%= item.image %> alt=<%= item.productName %>>
+                <p><%= item.price %>€</p>
+                <p>Categorías: <%= item.tags.join(' ') %></p>
+              </div>
             <% }) %>
-          </ul>
-      </div>
-      <div class="wrapper-list">
-        <h2>Anuncios de compra</h2>
-        <ul >
-          <% adlist.forEach ((item) => { %>
-            <li ><%= item %></li>
-          <% }) %>
-        </ul>
-      </div>
     </div>
 
   </body>

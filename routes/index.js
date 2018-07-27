@@ -23,13 +23,10 @@ router.get('/', async (req, res, next) => {
     /* Consulto a la BD con los filtros y recojo resultados en la variable adsToShow 
     con el nombre y el precio del producto */
     const allAds = await Ads.show(filter, limit, page, sort, priceMin, priceMax)
-    const adsToShow = allAds.map
-      (item => item.productName 
-              + ' ' 
-              + item.price +'€')
+  
       res.render('index', {
         title: 'NodePop',
-        adlist: adsToShow
+        adlist: allAds
       })
   } catch (err) {
       next(err)

@@ -15,13 +15,17 @@ h2{
   color: aqua;
 }
 
-li {
-  list-style: none;
+.element {
+  border: solid 1px;
 }
 
-.wrapper-ads{
+img {
+  max-width: 200px;
+}
+
+.wrapper-list{
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(4, 1fr)
 }
 
 .wrapper-filters {
