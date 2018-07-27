@@ -4,28 +4,28 @@
             "productName": "raqueta de tenis",
             "forSale": true,
             "price": 120,
-            "image": "",
+            "image": "http://localhost:3000/images/anuncios/raqueta.jpg",
             "tags": ["sports", "tennis", "amateur"]
         },
         {
             "productName": "estilográfica",
             "forSale": true,
             "price": 150,
-            "image": "",
+            "image": "http://localhost:3000/images/anuncios/estilografica.jpg",
             "tags": ["office", "pen", "presents"]
         },
         {
             "productName": "silla gamer",
             "forSale": false,
             "price": 90,
-            "image": "",
+            "image": "http://localhost:3000/images/anuncios/sillagamer.jpg",
             "tags": ["gamer", "chair", "work", "home"]
         },
         {
             "productName": "robot aspirador",
             "forSale": false,
             "price": 100,
-            "image": "",
+            "image": "http://localhost:3000/images/anuncios/robotaspirador.jpeg",
             "tags": ["home", "cleaning", "technology"]
         }
     ]

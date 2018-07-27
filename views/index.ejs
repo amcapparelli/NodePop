@@ -3,15 +3,45 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
   </head>
   <body>
     <h1>Listado de Anuncios de <%= title %> </h1>
-    <ul>
-      <% adlist.forEach ((item) => { %>
-        <li><%= item %></li>
-      <% }) %>
-    </ul>
+      <p>Aplique los siguientes filtros para encontrar lo que busca:</p>
+    
+      <div class="wrapper-filters">
+        <a href="http://localhost:3000/?sort=price">Precio (menor a mayor)</a>
+        <a href="http://localhost:3000/?sort=-price">Precio (mayor a menor)</a>
+     
+        <form action="http://localhost:3000" method="GET">
+          <label for="min">Precio más bajo</label>
+          <input type="number" value="" name="pricemin">
+          
+          <label for="max">Precio más alto</label>
+          <input type="number" value="" name="pricemax">
+          
+          <button type="submit">Buscar</button>
+        </form>
+      </div>
 
+    <div class="wrapper-ads">
+      <div class="wrapper-list">
+        <h2>Anuncios de venta</h2>
+          <ul >
+            <% adlist.forEach ((item) => { %>
+              <li ><%= item %></li>
+            <% }) %>
+          </ul>
+      </div>
+      <div class="wrapper-list">
+        <h2>Anuncios de compra</h2>
+        <ul >
+          <% adlist.forEach ((item) => { %>
+            <li ><%= item %></li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
 
   </body>
 </html>

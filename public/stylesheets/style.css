@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 a {
@@ -8,5 +8,40 @@ a {
 }
 
 h1 {
-  color: red;
+  color: rgb(0, 89, 255);
+}
+
+h2{
+  color: aqua;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper-ads{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+
+.wrapper-filters {
+  display: grid;
+  grid-template-columns: repeat(3, auto) 1fr;
+  grid-gap: 20px;
+}
+
+form {
+  display: grid;
+  grid-auto-rows: repeat(3, 1fr)
+}
+
+form button{
+  display: block;
+}
+
+
+form input{
+  margin-left: .5rem;
+  width: 3rem;
+  float: right;
 }
