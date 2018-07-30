@@ -29,3 +29,31 @@ To run the app in mode development use:
 ```
 npm run dev
 ```
+
+## API call
+
+To call the API use this URL:
+
+http://localhost:3000/apiv1/adsdata
+
+### Methods
+
+You can use **GET** with these parameters:
+
+* prodName=[/^string/]
+* limit=[integer]
+* page=[integer]
+* tag=[string]
+* priceMin=[integer]
+* priceMax=[integer]
+* forSale=[boolean]
+* sort=[string]
+
+You can use **POST** to create new Ads on DB with these parameters:
+
+* productName=[string]
+* price=[integer]
+* forSale=[boolean]
+* tags=[array[strings]]
+* image=[string[URL]]
+

@@ -9,11 +9,13 @@ a {
 
 h1 {
   color: #5D737E;
+  text-align: center;
 }
 
 h2{
   color: #64B6AC;
   margin-top: 4%;
+  text-align: center;
 }
 
 h3 {
@@ -38,10 +40,11 @@ img {
 
 .wrapper-filters {
   display: grid;
-  grid-template-columns: repeat(5, auto) 1fr;
+  grid-template-columns: repeat(5, auto) ;
   grid-gap: 40px;
   background-color: #DAFFEF;
   padding: 2%;
+  align-items: center;
 }
 
 form {

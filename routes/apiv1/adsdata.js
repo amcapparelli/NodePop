@@ -37,6 +37,19 @@ router.get('/', async (req, res, next) => {
       } catch (err) {
           next(err)
       }
-    });
+    })
+
+    router.post('/', async (req, res, next) => {
+        try{
+            const newAdData = req.body
+            const newAd = new Ads(newAdData)
+            const newAdSaved = await newAd.save()
+            res.json({success: true, result: newAdSaved})
+        } catch (err) {
+            next(err)
+        }
+    })
+
+
 
   module.exports = router
