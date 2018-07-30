@@ -27,6 +27,34 @@
             "price": 100,
             "image": "http://localhost:3000/images/anuncios/robotaspirador.jpeg",
             "tags": ["home", "cleaning", "technology"]
+        },
+        {
+            "productName": "Kindle Paperwhite",
+            "forSale": false,
+            "price": 75,
+            "image": "http://localhost:3000/images/anuncios/kindle.jpg",
+            "tags": ["home", "reading", "technology", "books", "ebooks"]
+        },
+        {
+            "productName": "auriculares inalámbricos",
+            "forSale": true,
+            "price": 80,
+            "image": "http://localhost:3000/images/anuncios/auriculares.jpg",
+            "tags": ["home", "music", "technology", "bluetooth"]
+        },
+        {
+            "productName": "cafetera capsulas",
+            "forSale": true,
+            "price": 30,
+            "image": "http://localhost:3000/images/anuncios/cafetera.jpg",
+            "tags": ["home", "coffee", "nescafe", "family"]
+        },
+        {
+            "productName": "aire acondicionado portátil",
+            "forSale": false,
+            "price": 180,
+            "image": "http://localhost:3000/images/anuncios/aire.jpg",
+            "tags": ["home", "airconditioner", "temperature"]
         }
     ]
  }

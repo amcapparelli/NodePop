@@ -22,18 +22,35 @@
           
           <button type="submit">Buscar</button>
         </form>
+
+        <a href="http://localhost:3000/?forsale=true">Solo Anuncios "Se vende"</a>
+        <a href="http://localhost:3000/?forsale=false">Solo Anuncios "Se compra"</a>
       </div>
 
-    <h2>Anuncios de venta</h2>
+    <h2>Anuncios de "Se vende"</h2>
       <div class="wrapper-list">
-            <% adlist.forEach ((item) => { %>
-              <div class="element">
-                <p><%= item.productName %> </p>
-                <img src=<%= item.image %> alt=<%= item.productName %>>
-                <p><%= item.price %>€</p>
-                <p>Categorías: <%= item.tags.join(' ') %></p>
-              </div>
-            <% }) %>
+          <% adlist.forEach ((item) => { 
+              if (item.forSale === true) { %>
+                <div class="element">
+                  <p><%= item.productName %> </p>
+                  <img src=<%= item.image %> alt=<%= item.productName %>>
+                  <p><%= item.price %>€</p>
+                  <p>Categorías: <%= item.tags.join(' ') %></p>
+                </div>
+              <%}}) %>
+    </div>
+
+    <h2>Anuncios de "Se Compra"</h2>
+      <div class="wrapper-list">
+          <% adlist.forEach ((item) => { 
+              if (item.forSale !== true) { %>
+                <div class="element">
+                  <p><%= item.productName %> </p>
+                  <img src=<%= item.image %> alt=<%= item.productName %>>
+                  <p><%= item.price %>€</p>
+                  <p>Categorías: <%= item.tags.join(' ') %></p>
+                </div>
+              <%}}) %>
     </div>
 
   </body>

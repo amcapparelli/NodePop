@@ -14,6 +14,7 @@ router.get('/', async (req, res, next) => {
     const sort = req.query.sort
     const priceMin = parseInt(req.query.pricemin)
     const priceMax = parseInt(req.query.pricemax)
+    const forsale = req.query.forsale
     
     //si se incluyen tags, busca en el array de tags para mostrar coincidencias
     if (tag){
@@ -22,7 +23,7 @@ router.get('/', async (req, res, next) => {
 
     /* Consulto a la BD con los filtros y recojo resultados en la variable adsToShow 
     con el nombre y el precio del producto */
-    const allAds = await Ads.show(filter, limit, page, sort, priceMin, priceMax)
+    const allAds = await Ads.show(filter, limit, page, sort, priceMin, priceMax, forsale)
   
       res.render('index', {
         title: 'NodePop',

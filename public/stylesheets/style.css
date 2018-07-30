@@ -13,10 +13,12 @@ h1 {
 
 h2{
   color: aqua;
+  margin-top: 4%;
 }
 
 .element {
   border: solid 1px;
+  text-align: center;
 }
 
 img {
@@ -25,22 +27,28 @@ img {
 
 .wrapper-list{
   display: grid;
-  grid-template-columns: repeat(4, 1fr)
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+
+  
 }
 
 .wrapper-filters {
   display: grid;
-  grid-template-columns: repeat(3, auto) 1fr;
-  grid-gap: 20px;
+  grid-template-columns: repeat(5, auto) 1fr;
+  grid-gap: 40px;
 }
 
 form {
   display: grid;
   grid-auto-rows: repeat(3, 1fr)
+
 }
 
 form button{
   display: block;
+  background-color: tomato;
+  padding: 5px;
 }
 
 
