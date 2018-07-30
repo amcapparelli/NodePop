@@ -40,7 +40,7 @@ img {
 
 .wrapper-filters {
   display: grid;
-  grid-template-columns: repeat(5, auto) ;
+  grid-template-columns: repeat(6, auto) ;
   grid-gap: 40px;
   background-color: #DAFFEF;
   padding: 2%;
@@ -58,11 +58,16 @@ form button{
   background-color: tomato;
   padding: 5px;
   margin-top: 5px;
+  max-width: 80%;
 }
 
 
 form input{
   margin-left: .5rem;
-  width: 3rem;
+  width: 4rem;
   float: right;
+}
+
+span {
+  margin-top: 5%;
 }

@@ -40,7 +40,7 @@ http://localhost:3000/apiv1/adsdata
 
 You can use **GET** with these parameters:
 
-* prodName=[/^string/]
+* prodname=[/^string/]
 * limit=[integer]
 * page=[integer]
 * tag=[string]
@@ -57,3 +57,8 @@ You can use **POST** to create new Ads on DB with these parameters:
 * tags=[array[strings]]
 * image=[string[URL]]
 
+### Success Response
+
+If success:
+
+content {"success": true, "result": data}

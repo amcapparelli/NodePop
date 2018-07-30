@@ -23,6 +23,12 @@
         <a href="http://localhost:3000/?sort=-price">Precio (mayor a menor)</a>
         <a href="http://localhost:3000/?forsale=true">Solo Anuncios "Se vende"</a>
         <a href="http://localhost:3000/?forsale=false">Solo Anuncios "Se compra"</a>
+
+        <form action="http://localhost:3000" method="GET">
+          <label for="prodname"> Busca por nombre:</label>
+          <input type="text" name="prodname" value="">
+          <button type="submit">Buscar</button>
+        </form>
       </div>
 
     <h2>Anuncios de "Se vende"</h2>
@@ -49,7 +55,11 @@
                   <p>Categorías: <%= item.tags.join(' ') %></p>
                 </div>
               <%}}) %>
-    </div>
+      </div>
+
+     <p><b>Todas las Categorías:</b>  <% for ( let i = 0; i < tagsList.length; i++ ) { %>
+          <a href=http://localhost:3000/?tag=<%= tagsList[i]%> > <%= tagsList[i]  %></a>       
+       <% } %> </p>
 
   </body>
 </html>

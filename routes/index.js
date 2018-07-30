@@ -27,10 +27,12 @@ router.get('/', async (req, res, next) => {
     /* Consulto a la BD con los filtros y recojo resultados en la variable adsToShow 
     con el nombre y el precio del producto */
     const allAds = await Ads.show(filter, limit, page, sort, priceMin, priceMax, forsale)
+    const allTags = await Ads.distinct("tags")
   
     res.render('index', {
       title: 'NodePop',
-      adlist: allAds
+      adlist: allAds, 
+      tagsList: allTags
     })
     
   } catch (err) {
