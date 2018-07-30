@@ -61,4 +61,4 @@ You can use **POST** to create new Ads on DB with these parameters:
 
 If success:
 
-content {"success": true, "result": data}
+content {"success": true, "result": [Ads data], allTags: [all tags available]}

@@ -17,15 +17,13 @@ router.get('/', async (req, res, next) => {
     const forsale = req.query.forsale
     const prodname = req.query.prodname
     
-    //si se incluyen tags, busca en el array de tags para mostrar coincidencias
     if (tag){
       filter.tags = tag
     }
     if (prodname) {
       filter.productName = {$regex: "^" + prodname}
     }
-    /* Consulto a la BD con los filtros y recojo resultados en la variable adsToShow 
-    con el nombre y el precio del producto */
+    /* Extraigo de la base de datos los anuncios según los filtros y todos los tags disponibles */
     const allAds = await Ads.show(filter, limit, page, sort, priceMin, priceMax, forsale)
     const allTags = await Ads.distinct("tags")
   

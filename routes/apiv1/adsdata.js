@@ -6,7 +6,7 @@ const Ads = require('../../lib/createModels')
 
 router.get('/', async (req, res, next) => {
     try {
-        // Recojo los posibles filtros de la URL
+        // Posibles filtros de la URL
         const filter = {}
         const tag = req.query.tag
         const limit = parseInt(req.query.limit)
@@ -16,8 +16,7 @@ router.get('/', async (req, res, next) => {
         const priceMax = parseInt(req.query.pricemax)
         const forsale = req.query.forsale
         const prodname = req.query.prodname
-        
-        //si se incluyen tags, busca en el array de tags para mostrar coincidencias
+         
         if (tag){
           filter.tags = tag
         }
@@ -25,15 +24,14 @@ router.get('/', async (req, res, next) => {
             filter.productName = {$regex: "^" + prodname}
         }
     
-        /* Consulto a la BD con los filtros y recojo resultados en la variable adsToShow 
-        con el nombre y el precio del producto */
+        /* Extraigo de la base de datos los anuncios según los filtros y todos los tags disponibles */
         const allAds = await Ads.show(filter, limit, page, sort, priceMin, priceMax, forsale)
-        
-        console.log(allTags)
-      
+        const allTags = await Ads.distinct("tags")
+
+        /* Respondo con un JSON */
           res.json ({
               success: true, 
-              result: allAds
+              result: allAds, allTags
             })
 
       } catch (err) {
@@ -51,7 +49,5 @@ router.get('/', async (req, res, next) => {
             next(err)
         }
     })
-
-
 
   module.exports = router
