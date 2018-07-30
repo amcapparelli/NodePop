@@ -7,22 +7,20 @@
   </head>
   <body>
     <h1>Listado de Anuncios de <%= title %> </h1>
-      <p>Aplique los siguientes filtros para encontrar lo que busca:</p>
+      <h2>Aplique los siguientes filtros para encontrar lo que busca:</h2>
     
       <div class="wrapper-filters">
-        <a href="http://localhost:3000/?sort=price">Precio (menor a mayor)</a>
-        <a href="http://localhost:3000/?sort=-price">Precio (mayor a menor)</a>
-     
+
         <form action="http://localhost:3000" method="GET">
           <label for="min">Precio más bajo</label>
           <input type="number" value="" name="pricemin">
-          
           <label for="max">Precio más alto</label>
           <input type="number" value="" name="pricemax">
-          
           <button type="submit">Buscar</button>
         </form>
 
+        <a href="http://localhost:3000/?sort=price">Precio (menor a mayor)</a>
+        <a href="http://localhost:3000/?sort=-price">Precio (mayor a menor)</a>
         <a href="http://localhost:3000/?forsale=true">Solo Anuncios "Se vende"</a>
         <a href="http://localhost:3000/?forsale=false">Solo Anuncios "Se compra"</a>
       </div>
@@ -32,7 +30,7 @@
           <% adlist.forEach ((item) => { 
               if (item.forSale === true) { %>
                 <div class="element">
-                  <p><%= item.productName %> </p>
+                  <h3><%= item.productName %> </h3>
                   <img src=<%= item.image %> alt=<%= item.productName %>>
                   <p><%= item.price %>€</p>
                   <p>Categorías: <%= item.tags.join(' ') %></p>
@@ -45,7 +43,7 @@
           <% adlist.forEach ((item) => { 
               if (item.forSale !== true) { %>
                 <div class="element">
-                  <p><%= item.productName %> </p>
+                  <h3><%= item.productName %> </h3>
                   <img src=<%= item.image %> alt=<%= item.productName %>>
                   <p><%= item.price %>€</p>
                   <p>Categorías: <%= item.tags.join(' ') %></p>

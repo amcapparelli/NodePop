@@ -4,8 +4,6 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-require('./lib/connMongoose')
-
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -23,6 +21,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
+require('./lib/connMongoose');
+
+//Registro Modelo de anuncios
+require('./lib/createModels');
+
+//Ruta del API
+app.use('/apiv1/adsdata', require('./routes/apiv1/adsdata'))
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -8,17 +8,22 @@ a {
 }
 
 h1 {
-  color: rgb(0, 89, 255);
+  color: #5D737E;
 }
 
 h2{
-  color: aqua;
+  color: #64B6AC;
   margin-top: 4%;
+}
+
+h3 {
+  color: #64B6AC;
 }
 
 .element {
   border: solid 1px;
   text-align: center;
+  background-color: #FCFFFD;
 }
 
 img {
@@ -29,14 +34,14 @@ img {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
-
-  
 }
 
 .wrapper-filters {
   display: grid;
   grid-template-columns: repeat(5, auto) 1fr;
   grid-gap: 40px;
+  background-color: #DAFFEF;
+  padding: 2%;
 }
 
 form {
@@ -49,6 +54,7 @@ form button{
   display: block;
   background-color: tomato;
   padding: 5px;
+  margin-top: 5px;
 }
 
 
