@@ -30,7 +30,7 @@ router.get('/', async (req, res, next) => {
     res.render('index', {
       title: 'NodePop',
       adlist: allAds, 
-      tagsList: allTags
+      tagsList: allTags.sort()
     })
     
   } catch (err) {

@@ -31,6 +31,12 @@
         </form>
       </div>
 
+    <p><b>Todas las Categorías:</b>  
+          <% for ( let i = 0; i < tagsList.length; i++ ) { %>
+          <a href=http://localhost:3000/?tag=<%= tagsList[i]%> > <%= tagsList[i]  %></a>       
+          <% } %> 
+    </p>
+
     <h2>Anuncios de "Se vende"</h2>
       <div class="wrapper-list">
           <% adlist.forEach ((item) => { 
@@ -57,9 +63,7 @@
               <%}}) %>
       </div>
 
-     <p><b>Todas las Categorías:</b>  <% for ( let i = 0; i < tagsList.length; i++ ) { %>
-          <a href=http://localhost:3000/?tag=<%= tagsList[i]%> > <%= tagsList[i]  %></a>       
-       <% } %> </p>
+     
 
   </body>
 </html>
