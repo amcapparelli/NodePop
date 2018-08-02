@@ -30,6 +30,13 @@ To run the app in mode development use:
 npm run dev
 ```
 
+## Run as a user
+
+To run the app as a user:
+```
+npm run start
+```
+
 ## API call
 
 To call the API use this URL:
@@ -44,6 +51,7 @@ You can use **GET** with these parameters:
 * limit=[integer]
 * page=[integer]
 * tag=[string]
+* pricerange=[integer]-[integer]
 * priceMin=[integer]
 * priceMax=[integer]
 * forSale=[boolean]
