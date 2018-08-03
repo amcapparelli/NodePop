@@ -38,9 +38,17 @@ app.use(function(req, res, next) {
 // error handler
 app.use(function(err, req, res, next) {
 
+  // error de validación al obtener listado de anuncios por peticiones GET
+  if (err.array) {
+    err.status = 422
+    const errorInfo = err.array({onlyFirstError: true})[0]
+    err.message = `Not valid - Error in parameter: ${errorInfo.param}. Reason: ${errorInfo.msg} `
+  }
+
+  // error de validacion al publicar anuncios por POST
   if (err.name === 'ValidationError') {
     err.status = 422
-    err.message = `Error de Validación - ${err.message} `
+    err.message = `Validation error, add not published: - ${err.message} `
   }
   // set locals, only providing error in development
   res.locals.message = err.message;

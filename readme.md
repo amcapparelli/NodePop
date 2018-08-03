@@ -59,9 +59,9 @@ You can use **GET** with these parameters:
 
 You can use **POST** to create new Ads on DB with these parameters:
 
-* productName=[string]
-* price=[integer]
-* forSale=[boolean]
+* productName=[string] - required
+* price=[integer] - required
+* forSale=[boolean] - required
 * tags=[array[strings]]
 * image=[string[URL]]
 

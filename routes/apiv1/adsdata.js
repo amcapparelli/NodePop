@@ -2,17 +2,17 @@
 
 const express = require('express')
 const router = express.Router()
-const { check, validationResult } = require('express-validator/check')
+const { check } = require('express-validator/check')
 const Ads = require('../../lib/createModels')
-const getParams = require('../../lib/functions')
+const getParams  = require('../../lib/functions')
+const validations = require('../../lib/validations')
 
-
-router.get('/', getParams)
+router.get('/', validations, getParams)
 
 router.post('/', [
-    check('forSale', 'Must be bollean').isBoolean(),
+    check('forSale').isBoolean(),
     check('price').isNumeric(),
-    check('image').isURL(), 
+    check('image').isDataURI(), 
     check('productName').isAlphanumeric(), 
     check('tags').isArray()
     ] ,async (req, res, next) => {
