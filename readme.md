@@ -51,7 +51,10 @@ You can use **GET** with these parameters:
 * limit=[integer]
 * page=[integer]
 * tag=[string]
-* pricerange=[integer]-[integer]
+* pricerange=[integer]-[integer] 
+  * (if first integer + '-': { price >= })
+  * (if '-' + second integer: { price <= })
+  * (if integer: { price = })
 * priceMin=[integer]
 * priceMax=[integer]
 * forSale=[boolean]
