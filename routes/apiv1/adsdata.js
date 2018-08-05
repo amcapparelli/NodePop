@@ -10,11 +10,11 @@ const validations = require('../../lib/validations')
 router.get('/', validations, getParams)
 
 router.post('/', [
-    check('productName').isAlphanumeric().withMessage('Only letters and numbers'), 
-    check('image').isURL().withMessage('Image must be an URL'),
-    check('price').isNumeric().withMessage('Price must be numeric'),
-    check('forSale').isBoolean().withMessage('forSale must be a boolean'),
-    check('tags').isAlpha().withMessage('tags must be a string')
+    check('productName').isAlphanumeric().withMessage('Required field, only letters and numbers'), 
+    check('image').isURL().withMessage('Must be an URL'),
+    check('price').isNumeric().withMessage('Required field, must be numeric'),
+    check('forSale').isBoolean().withMessage('Required field, must be a boolean'),
+    check('tags').isAlpha().withMessage('Must be a string')
 ], async (req, res, next) => {
     try{
         validationResult(req).throw()
