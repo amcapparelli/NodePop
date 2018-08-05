@@ -55,9 +55,9 @@ You can use **GET** with these parameters:
   * (if first integer + '-': { price >= })
   * (if '-' + second integer: { price <= })
   * (if integer: { price = })
-* priceMin=[integer]
-* priceMax=[integer]
-* forSale=[boolean]
+* pricemin=[integer]
+* pricemax=[integer]
+* forsale=[boolean]
 * sort=[string]
 
 You can use **POST** to create new Ads on DB with these parameters:
