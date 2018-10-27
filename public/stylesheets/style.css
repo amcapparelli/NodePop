@@ -91,6 +91,17 @@ form button{
   color: white;
 }
 
+.login button {
+  margin-top: 1rem;
+  width: 50%;
+  border-radius: 20px;
+  justify-self: center;
+}
+
+.notification {
+  color: red;
+}
+
 form input{
   margin-left: .5rem;
   width: 4rem;

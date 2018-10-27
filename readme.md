@@ -15,12 +15,18 @@ npm install
 
 Then set your environment variables values using the '.env.forReview' file, and copy/paste that info into a new '.env' file
 
-## Install DB
+## Install DB Ads and Users
 
 Please, before running NodePop, install the database objects using:
 
 ```
 npm run install_db
+```
+
+Then install the users database:
+
+```
+npm run install_users
 ```
 
 ## Run in mode development
