@@ -6,6 +6,9 @@ const { check, validationResult } = require('express-validator/check')
 const Ads = require('../../lib/createModels')
 const getParams  = require('../../lib/functions')
 const validations = require('../../lib/validations')
+const jwtAuth = require('../../lib/jwtAuth')
+
+router.use(jwtAuth())
 
 router.get('/', validations, getParams)
 
