@@ -22,13 +22,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+//Variables globales de la aplicación
+app.locals.title = 'Nodepop'
+
 require('./lib/connMongoose');
 
 //Registro Modelo de anuncios
 require('./lib/createModels');
 
 //Ruta del API
-app.use('/apiv1/adsdata', require('./routes/apiv1/adsdata'))
+app.use('/apiv1/adsdata',      require('./routes/apiv1/adsdata'));
+app.use('/apiv1/authenticate', require('./routes/apiv1/authentication'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

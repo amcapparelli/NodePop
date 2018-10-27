@@ -1,3 +1,11 @@
+:root {
+  --main-color: #5D737E;
+  --secondary-color: #64B6AC;
+  --links-color: #00B7FF ;
+  --green-light: #64B6AC;
+  --background-color: #FCFFFD;
+}
+
 body {
   padding: 50px;
   font-family: 'Ubuntu', sans-serif;
@@ -53,14 +61,35 @@ form {
 
 }
 
+.login {
+  display: grid;
+  grid-template-rows: 1fr;  
+  background-color: var(--secondary-color);
+  padding: 2%;
+  border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.login label {
+  margin-top: 1rem;
+}
+
+.login input {
+  width: 10rem;
+}
+
 form button{
   display: block;
-  background-color: tomato;
+  background-color: #5D737E;
   padding: 5px;
   margin-top: 5px;
   max-width: 80%;
+  color: white;
 }
-
 
 form input{
   margin-left: .5rem;

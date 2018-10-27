@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
-  </head>
+    <% include head.ejs %>
   <body>
     <h1>Listado de Anuncios de <%= title %> </h1>
       <h2>Aplique los siguientes filtros para encontrar lo que busca:</h2>
@@ -62,8 +58,5 @@
                 </div>
               <%}}) %>
       </div>
-
-     
-
   </body>
 </html>
