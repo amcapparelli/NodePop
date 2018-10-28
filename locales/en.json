@@ -4,7 +4,7 @@
 	"Precio (mayor a menor)": "Price (higher to lower)",
 	"Solo Anuncios \"Se vende": "Only ads \"for sale",
 	"Solo Anuncios \"Se compra\"": "Only ads \"to buy\"",
-	"Busca por nombre:": "Find by name:",
+	"Busca por nombre": "Find by name",
 	"Buscar": "Search",
 	"Todas las Categorías:": "All categories:",
 	"Anuncios de \"Se vende\"": "Ads \"For sale\"",
@@ -12,5 +12,15 @@
 	"Listado de anuncios de": "Ads list by",
 	"Aplique los siguientes filtros para encontrar lo que busca:": "Apply filters to find what you are looking for:",
 	"Precio más bajo": "Lower price",
-	"Precio más alto": "Higher price"
+	"Precio más alto": "Higher price",
+	"raqueta de tenis": "tennis raquet",
+	"estilográfica": "fountain pen",
+	"auriculares inalámbricos": "wireless headphones",
+	"cafetera capsulas": "coffee machine",
+	"silla gamer": "gamer chair",
+	"robot aspirador": "robot vacuum cleaner",
+	"kindle paperwhite": "kindle paperwhite",
+	"aire acondicionado portátil": "portable air conditioner",
+	"Categorías: ": "Categories: ",
+	"Elija una imagen": "Elija una imagen"
 }

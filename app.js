@@ -36,7 +36,7 @@ require('./lib/createModels');
 //Rutas del API
 app.use('/apiv1/adsdata',      require('./routes/apiv1/adsdata'));
 app.use('/apiv1/authenticate', require('./routes/apiv1/authentication'));
-
+app.use('/apiv1/*',            require('./routes/apiv1/404'));
 
 //Rutas de la app
 app.use('/lang', require('./routes/lang'))

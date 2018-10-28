@@ -45,26 +45,23 @@ npm run start
 
 ## API authentication
 
-http://localhost:3000/apiv1/authenticate
+POST    /apiv1/authenticate
 
 for authentication you can use this example email users and passwords:
 
-* maya.watkins@example.com | bf5ad5ed-23ac-4f5e-8906-638aabd0c206
-* lenni.huotari@example.com | 2421e7ae-095f-40bc-a1aa-b6b9e791fdb8
-* poppy.edwards@example.com | 1db0aaea-caef-4a4a-884f-b40601152aa3
+* email: maya.watkins@example.com | password: bf5ad5ed-23ac-4f5e-8906-638aabd0c206
+* email: lenni.huotari@example.com | password: 2421e7ae-095f-40bc-a1aa-b6b9e791fdb8
+* email: poppy.edwards@example.com | password: 1db0aaea-caef-4a4a-884f-b40601152aa3
 
-## success response for api authentication
-If success:
+# Success response 
 
 content {"success": true, "token": token}
 
 ## API call
 
-To call the API use this URL:
+/apiv1/adsdata
 
-http://localhost:3000/apiv1/adsdata
-
-### Methods
+# Methods supported:
 
 You can use **GET** with these parameters:
 

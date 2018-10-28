@@ -18,7 +18,7 @@
         <a href="http://localhost:3000/?forsale=false"><%= __('Solo Anuncios "Se compra"') %></a>
 
         <form action="http://localhost:3000" method="GET">
-          <label for="prodname"> <%= __('Busca por nombre:') %></label>
+          <label for="prodname"> <%= __('Busca por nombre') %></label>
           <input type="text" name="prodname" value="">
           <button type="submit"><%= __('Buscar') %></button>
         </form>
@@ -35,10 +35,10 @@
           <% adlist.forEach ((item) => { 
               if (item.forSale === true) { %>
                 <div class="element">
-                  <h3><%= item.productName %> </h3>
-                  <img src=<%= item.image %> alt=<%= item.productName %>>
+                  <h3><%= __(item.productName) %> </h3>
+                  <img src=<%= item.image %> alt=<%= __(item.productName) %>>
                   <p><%= item.price %>€</p>
-                  <p>Categorías: <%= item.tags.join(' ') %></p>
+                  <p><%=__('Categorías: ') %><%= item.tags.join(' ') %></p>
                 </div>
               <%}}) %>
     </div>
@@ -48,10 +48,10 @@
           <% adlist.forEach ((item) => { 
               if (item.forSale !== true) { %>
                 <div class="element">
-                  <h3><%= item.productName %> </h3>
-                  <img src=<%= item.image %> alt=<%= item.productName %>>
+                  <h3><%= __(item.productName) %> </h3>
+                  <img src=<%= item.image %> alt=<%= __(item.productName) %>>
                   <p><%= item.price %>€</p>
-                  <p>Categorías: <%= item.tags.join(' ') %></p>
+                  <p><%=__('Categorías: ') %><%= item.tags.join(' ') %></p>
                 </div>
               <%}}) %>
       </div>

@@ -94,8 +94,9 @@ form button{
   background-color: #5D737E;
   padding: 5px;
   margin-top: 5px;
-  max-width: 80%;
+  border-radius: 20px;
   color: white;
+  justify-self: center;
 }
 
 .login button {
@@ -109,10 +110,11 @@ form button{
   color: red;
 }
 
-form input{
+form input, label{
   margin-left: .5rem;
-  width: 4rem;
+  width: 8rem;
   float: right;
+  justify-self: center;
 }
 
 span {
