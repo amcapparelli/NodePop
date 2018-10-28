@@ -6,7 +6,7 @@
 <body>
     <form class="login" method="POST">
         <label for="email">Email: <input type="text" name="email"></label>
-        <label for="password">Contraseña: <input type="text" name="password"></label>
+        <label for="password"><%= __('Password') %>: <input type="text" name="password"></label>
         <button type="submit">Login</button>
         <div class="notification" ><%= error %></div>
     </form>

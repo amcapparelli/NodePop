@@ -19,6 +19,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+const i18n = require('./lib/i18n_configure')()
+app.use(i18n.init)
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
@@ -30,10 +33,13 @@ require('./lib/connMongoose');
 //Registro Modelo de anuncios
 require('./lib/createModels');
 
-//Ruta del API
+//Rutas del API
 app.use('/apiv1/adsdata',      require('./routes/apiv1/adsdata'));
 app.use('/apiv1/authenticate', require('./routes/apiv1/authentication'));
 
+
+//Rutas de la app
+app.use('/lang', require('./routes/lang'))
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

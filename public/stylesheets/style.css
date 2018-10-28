@@ -11,8 +11,15 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 
+nav>ul>li {
+  list-style-type: none;
+  display: inline;
+  
+}
+
 a {
-  color: #00B7FF;
+  color: var(--links-color);
+  text-decoration: none;
 }
 
 h1 {
