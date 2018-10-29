@@ -10,11 +10,12 @@ const validationsPOST = require('../../lib/validationsPOST')
 const jwtAuth = require('../../lib/jwtAuth')
 const upload = require('../../lib/uploadImagesConfig')
 
+
 router.use(jwtAuth())
 
 router.get('/', validationsGET, getParams)
 
-router.post('/', upload.single('imageFile'), validationsPOST, async (req, res, next) => {
+router.post('/',  upload.single('imageFile'), validationsPOST, async (req, res, next) => {
     try{
         validationResult(req).throw()
         const newAdData = req.body
