@@ -60,6 +60,7 @@ content {"success": true, "token": token}
 ## API call
 
 /apiv1/adsdata
+token can be sent on body, headers ('x-access-token') or as querystring
 
 # Methods supported:
 
@@ -85,6 +86,7 @@ You can use **POST** to create new Ads on DB with these parameters:
 * forSale=[boolean] - required
 * tags=[array[strings]]
 * image=[string[URL]]
+* imageFile=[jpg]
 
 ## Success Response
 

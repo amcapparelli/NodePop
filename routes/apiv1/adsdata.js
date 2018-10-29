@@ -2,23 +2,19 @@
 
 const express = require('express')
 const router = express.Router()
-const { check, validationResult } = require('express-validator/check')
+const { validationResult } = require('express-validator/check')
 const Ads = require('../../lib/createModels')
 const getParams  = require('../../lib/functions')
-const validations = require('../../lib/validations')
+const validationsGET = require('../../lib/validationsGET')
+const validationsPOST = require('../../lib/validationsPOST')
 const jwtAuth = require('../../lib/jwtAuth')
+const upload = require('../../lib/uploadImagesConfig')
 
 router.use(jwtAuth())
 
-router.get('/', validations, getParams)
+router.get('/', validationsGET, getParams)
 
-router.post('/', [
-    check('productName').isAlphanumeric().withMessage('Required field, only letters and numbers'), 
-    check('image').isURL().withMessage('Must be an URL'),
-    check('price').isNumeric().withMessage('Required field, must be numeric'),
-    check('forSale').isBoolean().withMessage('Required field, must be a boolean'),
-    check('tags').isAlpha().withMessage('Must be a string')
-], async (req, res, next) => {
+router.post('/', upload.single('imageFile'), validationsPOST, async (req, res, next) => {
     try{
         validationResult(req).throw()
         const newAdData = req.body

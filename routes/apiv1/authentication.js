@@ -17,7 +17,7 @@ router.post('/', async (req, res, next) => {
     
     //autenticación de usuario con jsonwebtoken
     jwt.sign({ _id: user._id }, process.env.JWT_SECRET, {
-        expiresIn: '24h'
+        expiresIn: '1d'
     }, (error, token) => {
         if (error) {
             next(error)
