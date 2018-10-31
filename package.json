@@ -9,8 +9,8 @@
     "install_users": "node ./lib/getUsers"
   },
   "dependencies": {
+    "amqplib": "^0.5.2",
     "cookie-parser": "~1.4.3",
-    "cote": "^0.18.0",
     "debug": "~2.6.9",
     "dotenv": "^6.0.0",
     "ejs": "~2.5.7",
