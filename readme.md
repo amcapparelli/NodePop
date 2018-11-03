@@ -31,16 +31,25 @@ npm run install_users
 
 ## Run in mode development
 
-To run the app in mode development use:
 ```
 npm run dev
 ```
 
-## Run as a user
+## Run in mode cluster
 
-To run the app as a user:
+```
+npm run cluster
+```
+
+## Run in mode production
+
 ```
 npm run start
+```
+
+## Run tests
+```
+npm test
 ```
 
 ## API authentication
@@ -49,6 +58,7 @@ POST    /apiv1/authenticate
 
 for authentication you can use this example email users and passwords:
 
+* email: user@example.com | password: 1234
 * email: maya.watkins@example.com | password: bf5ad5ed-23ac-4f5e-8906-638aabd0c206
 * email: lenni.huotari@example.com | password: 2421e7ae-095f-40bc-a1aa-b6b9e791fdb8
 * email: poppy.edwards@example.com | password: 1db0aaea-caef-4a4a-884f-b40601152aa3
