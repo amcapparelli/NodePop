@@ -20,6 +20,7 @@ router.post('/',  upload.single('imageFile'), validationsPOST, async (req, res, 
     try{
         validationResult(req).throw()
         const newAdData = req.body
+        newAdData.imageFile = req.file.path
         const newAd = new Ads(newAdData)
         const newAdSaved = await newAd.save()
         publisher(req.file.path)
