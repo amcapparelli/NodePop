@@ -96,7 +96,7 @@ You can use **POST** to create new Ads on DB with these parameters:
 * forSale=[boolean] - required
 * tags=[array[strings]]
 * image=[string[URL]]
-* imageFile=[jpg]
+* imageFile=[jpg, png]
 
 ## Success Response
 
