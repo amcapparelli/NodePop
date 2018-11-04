@@ -73,7 +73,7 @@ content {"success": true, "token": token}
 
 token can be sent on body, headers ('x-access-token') or as querystring
 
-# Methods supported:
+## Methods Supported:
 
 You can use **GET** with these parameters:
 
