@@ -70,6 +70,7 @@ content {"success": true, "token": token}
 ## API call
 
 /apiv1/adsdata
+
 token can be sent on body, headers ('x-access-token') or as querystring
 
 # Methods supported:
