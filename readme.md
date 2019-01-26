@@ -6,6 +6,12 @@ NodePop shows second-hand products for sale or to buy.
 NodePop was developed in Node.js and uses MongoDB.
 Developed by Alejandro Capparelli
 
+## DevOps
+
+To see this app in production, visit:
+http://ec2-52-15-204-89.us-east-2.compute.amazonaws.com/
+
+
 ## Install NodePop
 
 To install NodePop use 
