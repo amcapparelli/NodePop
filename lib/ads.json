@@ -4,56 +4,56 @@
             "productName": "raqueta de tenis",
             "forSale": true,
             "price": 120,
-            "image": "http://localhost:3000/images/anuncios/raqueta.jpg",
+            "image": "/images/anuncios/raqueta.jpg",
             "tags": ["sports", "tennis", "amateur"]
         },
         {
             "productName": "estilográfica",
             "forSale": true,
             "price": 150,
-            "image": "http://localhost:3000/images/anuncios/estilografica.jpg",
+            "image": "/images/anuncios/estilografica.jpg",
             "tags": ["office", "pen", "presents"]
         },
         {
             "productName": "silla gamer",
             "forSale": false,
             "price": 90,
-            "image": "http://localhost:3000/images/anuncios/sillagamer.jpg",
+            "image": "/images/anuncios/sillagamer.jpg",
             "tags": ["gamer", "chair", "work", "home"]
         },
         {
             "productName": "robot aspirador",
             "forSale": false,
             "price": 100,
-            "image": "http://localhost:3000/images/anuncios/robotaspirador.jpeg",
+            "image": "/images/anuncios/robotaspirador.jpeg",
             "tags": ["home", "cleaning", "technology"]
         },
         {
             "productName": "Kindle Paperwhite",
             "forSale": false,
             "price": 75,
-            "image": "http://localhost:3000/images/anuncios/kindle.jpg",
+            "image": "/images/anuncios/kindle.jpg",
             "tags": ["home", "reading", "technology", "books", "ebooks"]
         },
         {
             "productName": "auriculares inalámbricos",
             "forSale": true,
             "price": 80,
-            "image": "http://localhost:3000/images/anuncios/auriculares.jpg",
+            "image": "/images/anuncios/auriculares.jpg",
             "tags": ["home", "music", "technology", "bluetooth"]
         },
         {
             "productName": "cafetera capsulas",
             "forSale": true,
             "price": 30,
-            "image": "http://localhost:3000/images/anuncios/cafetera.jpg",
+            "image": "/images/anuncios/cafetera.jpg",
             "tags": ["home", "coffee", "nescafe", "family"]
         },
         {
             "productName": "aire acondicionado portátil",
             "forSale": false,
             "price": 180,
-            "image": "http://localhost:3000/images/anuncios/aire.jpg",
+            "image": "/images/anuncios/aire.jpg",
             "tags": ["home", "airconditioner", "temperature"]
         }
     ]
