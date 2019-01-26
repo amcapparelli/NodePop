@@ -4,7 +4,7 @@
     <% include header.ejs %>
   <body>
       <div class="wrapper-filters">
-        <form action="http://localhost:3000" method="GET">
+        <form action="/" method="GET">
           <label for="min"><%= __('Precio más bajo') %></label>
           <input type="number" value="" name="pricemin">
           <label for="max"><%= __('Precio más alto') %></label>
@@ -12,12 +12,12 @@
           <button type="submit"><%= __('Buscar') %></button>
         </form>
 
-        <a href="http://localhost:3000/?sort=price"><%= __('Precio (menor a mayor)') %></a>
-        <a href="http://localhost:3000/?sort=-price"><%= __('Precio (mayor a menor)') %></a>
-        <a href="http://localhost:3000/?forsale=true"><%= __('Solo Anuncios "Se vende') %>"</a>
-        <a href="http://localhost:3000/?forsale=false"><%= __('Solo Anuncios "Se compra"') %></a>
+        <a href="/?sort=price"><%= __('Precio (menor a mayor)') %></a>
+        <a href="/?sort=-price"><%= __('Precio (mayor a menor)') %></a>
+        <a href="/?forsale=true"><%= __('Solo Anuncios "Se vende') %>"</a>
+        <a href="/?forsale=false"><%= __('Solo Anuncios "Se compra"') %></a>
 
-        <form action="http://localhost:3000" method="GET">
+        <form action="/" method="GET">
           <label for="prodname"> <%= __('Busca por nombre') %></label>
           <input type="text" name="prodname" value="">
           <button type="submit"><%= __('Buscar') %></button>
@@ -26,7 +26,7 @@
 
     <p><b><%= __('Todas las Categorías:') %></b>  
           <% for ( let i = 0; i < tagsList.length; i++ ) { %>
-          <a href=http://localhost:3000/?tag=<%= tagsList[i]%> > <%= tagsList[i]  %></a>       
+          <a href=/?tag=<%= tagsList[i]%> > <%= tagsList[i]  %></a>       
           <% } %> 
     </p>
 
